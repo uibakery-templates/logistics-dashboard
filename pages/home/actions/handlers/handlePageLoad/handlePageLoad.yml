@@ -1,0 +1,141 @@
+id: '17157744067890.2789880387690047'
+kind: workflow
+name: handlePageLoad
+nameConfigured: true
+steps:
+  - id: '17158544986760.4939521141543348'
+    type: executeAction
+    name: fetchCouriers
+    params:
+      - type: action
+        value: '17158538252640.0058353361592609065'
+        valueType: custom
+      - type: isActionsLibraryCall
+        value: false
+        valueType: custom
+      - type: customParams
+        value: ./fetchCouriers-customParams.js
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    nameConfigured: true
+  - id: '17159537449320.27301848114213967'
+    type: executeAction
+    name: fetchLocationData
+    params:
+      - type: action
+        value: '17157744324730.18195111084339444'
+        valueType: custom
+      - type: isActionsLibraryCall
+        value: false
+        valueType: custom
+      - type: customParams
+        value: ./fetchLocationData-customParams.js
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    nameConfigured: true
+  - id: '17159538166950.5911082265548708'
+    type: putInStore
+    name: save
+    params:
+      - type: name
+        value: '17159522519490.9223236943436155'
+        valueType: string
+      - type: value
+        value: '{{data[0]}}'
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: producible
+        value: true
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+  - id: '17157744126850.7460201830605859'
+    type: customAsyncCode
+    name: startInterval
+    params:
+      - type: asyncCode
+        value: ./startInterval.js
+        valueType: interpolatedValue
+        interpolationType: code
+    level: 1
+    fallthroughError: false
+    isChanged: true
+    paused: false
+    nameConfigured: true
+  - id: '17159540138340.7895388969616313'
+    type: executeAction
+    name: execute
+    params:
+      - type: action
+        value: '17158497280760.5505980844400267'
+        valueType: custom
+      - type: isActionsLibraryCall
+        value: false
+        valueType: custom
+      - type: customParams
+        value: ./execute-customParams.js
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.handlePageLoad.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.handlePageLoad.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.handlePageLoad.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true
+parentId: '17158643722910.31532687807151816'

@@ -1,0 +1,130 @@
+id: '17158497280760.5505980844400267'
+kind: workflow
+name: handlePointSelect
+nameConfigured: true
+steps:
+  - id: '17159523303360.4729519181148836'
+    type: condition
+    name: condition
+    params:
+      - type: code
+        value: ./condition.js
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: steps
+        value:
+          - condition: true
+            steps:
+              - id: '17159524603620.2854305309952829'
+                type: putInStore
+                name: save2
+                params:
+                  - type: name
+                    value: '17159522519490.9223236943436155'
+                    valueType: string
+                  - type: value
+                    value: '{{params.data}}'
+                    valueType: interpolatedValue
+                    interpolationType: code
+                  - type: producible
+                    value: true
+                    valueType: custom
+                level: 1
+                fallthroughError: false
+                isChanged: true
+          - condition: false
+            steps:
+              - id: '17159531025030.7012556294600463'
+                type: customAsyncCode
+                name: code2
+                params:
+                  - type: asyncCode
+                    value: ./code2.js
+                    valueType: interpolatedValue
+                    interpolationType: code
+                level: 1
+                fallthroughError: false
+                isChanged: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+  - id: '17158612576250.4050425835524669'
+    type: executeAction
+    name: execute
+    params:
+      - type: action
+        value: '17158405735850.2750318821889779'
+        valueType: custom
+      - type: isActionsLibraryCall
+        value: false
+        valueType: custom
+      - type: customParams
+        value: ./execute-customParams.js
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+  - id: '17158594189450.33653272712609894'
+    type: customAsyncCode
+    name: updateOrdersTable
+    params:
+      - type: asyncCode
+        value: ./updateOrdersTable.js
+        valueType: interpolatedValue
+        interpolationType: code
+    level: 1
+    fallthroughError: false
+    isChanged: true
+    nameConfigured: true
+  - id: '17158595780410.4483444989711287'
+    type: putInStore
+    name: save
+    params:
+      - type: name
+        value: '17158593398710.9699905717073312'
+        valueType: string
+      - type: value
+        value: '{{data}}'
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: producible
+        value: true
+        valueType: custom
+    level: 1
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: true
+parentPageId: '1'
+config:
+  shouldConfirm: false
+  confirmMessage: >-
+    Are you sure you'd like to proceed with
+    "{{actions.handlePointSelect.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.handlePointSelect.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.handlePointSelect.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true
+parentId: '17158643722910.31532687807151816'

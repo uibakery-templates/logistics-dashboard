@@ -1,0 +1,91 @@
+id: '17157744324730.18195111084339444'
+kind: workflow
+name: fetchLocationData
+nameConfigured: true
+steps:
+  - id: '17158378409850.0996418910896657'
+    type: LOAD_COLLECTION
+    name: load
+    params:
+      - type: datasourceId
+        value: Logistics location data
+        valueType: string
+      - type: resourceId
+        value: locations
+        valueType: string
+      - type: filters
+        value: []
+        valueType: custom
+      - type: ordering
+        value:
+          limit:
+            value: '{{params?.numberOfDeliveries ?? 5}}'
+          offset:
+            value: '{{params?.tableOffset}}'
+          orderBy:
+            value: ''
+          orderDirection:
+            value: asc
+        valueType: custom
+      - type: additionalParams
+        value:
+          - name: ''
+            value: ''
+        valueType: custom
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: successMapper
+        value: ./load-successMapper.js
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: true
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    nameConfigured: true
+    paused: false
+  - id: '17158608681070.2755933594464999'
+    type: putInStore
+    name: save
+    params:
+      - type: name
+        value: '17158608826890.07259432375188735'
+        valueType: string
+      - type: value
+        value: '{{data}}'
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: producible
+        value: true
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    paused: false
+mode: manual
+modeConfigured: true
+parentPageId: '1'
+config:
+  shouldConfirm: false
+  confirmMessage: >-
+    Are you sure you'd like to proceed with
+    "{{actions.fetchLocationData.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.fetchLocationData.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.fetchLocationData.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true
+parentId: '17158405683080.8413791205561061'

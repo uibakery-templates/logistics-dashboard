@@ -1,0 +1,18 @@
+id: '17159522519490.9223236943436155'
+kind: store_item
+name: selectedCourier
+nameConfigured: true
+steps: []
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+parentId: '17158612089750.7396078079792305'
+storeItem:
+  value: '{}'
+  valueType: object
+  initialValue: '{}'
+  version: 1
+config:
+  preserveStateOnPageChange: false
+selected: true
+configured: true

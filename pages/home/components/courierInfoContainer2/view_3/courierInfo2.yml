@@ -1,0 +1,207 @@
+id: '17159556564380.9220181912759775'
+definitionId: detail
+styles:
+  xl:
+    gridItem:
+      x: 0
+      y: 28
+      w: 24
+      h: 107
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 28
+      w: 24
+      h: 75
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  dynamicFields:
+    value: []
+    dataValue: |-
+      [
+        {
+          "prop": "id",
+          "type": "number",
+          "primaryKey": true
+        },
+        "name",
+        {
+          "prop": "avatar",
+          "type": "image"
+        },
+        {
+          "prop": "email",
+          "type": "link"
+        }
+      ]
+    withData: false
+  entity: '{{state.selectedCourier}}'
+  name: courierInfo2
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Courier
+  __UIBAKERY__SHOW__CONDITION__CODE__: ''
+  showLoading:
+    value: false
+    dataValue: '{{}}'
+    withData: true
+parentSlotId: '17159556564380.02442397701799992'
+index: 0
+actions: {}
+slots:
+  - id: '17159556564380.4830974307832845'
+    name: structure
+    children:
+      - id: '17159556564380.6035602807793659'
+        definitionId: atomicNumber
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicNumber5
+          prop: row_number_id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        parentSlotId: '17159556564380.4830974307832845'
+        index: 0
+        slots: []
+      - id: '17159556564380.4245664952027659'
+        definitionId: atomicImage
+        styles:
+          xl:
+            visible: true
+            fit: cover
+        properties:
+          name: atomicImage3
+          prop: Photo
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          imageShape: oval
+          fullWidth: true
+          title: ' '
+          mappedValue: ''
+        parentSlotId: '17159556564380.4830974307832845'
+        index: 1
+        slots: []
+      - id: '17159556564380.10735422694535512'
+        definitionId: atomicNumber
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicNumber6
+          prop: courier_id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        parentSlotId: '17159556564380.4830974307832845'
+        index: 2
+        slots: []
+      - id: '17159556564380.5835839878520575'
+        definitionId: atomicNumber
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicNumber7
+          prop: id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        parentSlotId: '17159556564380.4830974307832845'
+        index: 3
+        slots: []
+      - id: '17159556564380.08255101681444077'
+        definitionId: atomicString
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString9
+          prop: Name
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        parentSlotId: '17159556564380.4830974307832845'
+        index: 4
+        slots: []
+      - id: '17159556564380.12880247051647964'
+        definitionId: atomicNumber
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber8
+          prop: latitude
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        parentSlotId: '17159556564380.4830974307832845'
+        index: 5
+        slots: []
+      - id: '17159556564380.10156563168604182'
+        definitionId: atomicNumber
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber9
+          prop: longitude
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        parentSlotId: '17159556564380.4830974307832845'
+        index: 6
+        slots: []
+      - id: '17159556564380.6472085592190175'
+        definitionId: atomicString
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicString13
+          prop: icon
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        parentSlotId: '17159556564380.4830974307832845'
+        index: 7
+        slots: []
+      - id: '17159556564380.5452829355340918'
+        definitionId: atomicString
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicString14
+          prop: text
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        parentSlotId: '17159556564380.4830974307832845'
+        index: 8
+        slots: []

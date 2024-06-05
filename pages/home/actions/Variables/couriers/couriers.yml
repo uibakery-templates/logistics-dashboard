@@ -1,0 +1,14 @@
+id: '17158542747320.45029088002637563'
+nameConfigured: true
+name: couriers
+kind: store_item
+parentId: '17158612089750.7396078079792305'
+storeItem:
+  value: ''
+  valueType: array
+  initialValue: '[]'
+  version: 1
+steps: []
+parentPageId: '1'
+config:
+  preserveStateOnPageChange: false

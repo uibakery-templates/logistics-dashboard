@@ -1,0 +1,14 @@
+id: '17158593398710.9699905717073312'
+nameConfigured: true
+name: orders
+kind: store_item
+parentId: '17158612089750.7396078079792305'
+storeItem:
+  value: ''
+  valueType: array
+  initialValue: '[]'
+  version: 1
+steps: []
+config:
+  preserveStateOnPageChange: false
+parentPageId: '1'

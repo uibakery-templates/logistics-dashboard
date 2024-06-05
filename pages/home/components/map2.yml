@@ -1,0 +1,81 @@
+id: '17159556391180.1875233012199613'
+definitionId: map
+parentSlotId: '2'
+styles:
+  xl:
+    gridItem:
+      x: 0
+      y: 1
+      w: 20
+      h: 135
+    flex:
+      alignSelf: auto
+      sizing: shrink-if-needed
+      flexGrow: 0
+      flexShrink: 1
+      flexBasis:
+        customValue: auto
+      order: 0
+      size:
+        widthValue: 300
+        widthUnit: px
+        heightValue: 400
+        heightUnit: px
+      grow: '1'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 1
+      w: 24
+      h: 117
+    flex:
+      alignSelf: auto
+      sizing: shrink-if-needed
+      flexGrow: 0
+      flexShrink: 1
+      flexBasis:
+        customValue: auto
+      order: 0
+      size:
+        widthValue: 300
+        widthUnit: px
+        heightValue: 400
+        heightUnit: px
+      grow: '1'
+      shrink: '0'
+properties:
+  name: map2
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  fitBounds:
+    value: false
+    dataValue: 'true'
+    withData: false
+  containerStyles:
+    withData: false
+    dataValue: |-
+      {
+        padding: 'default',
+        shadow: 'default',
+        border: 'default'
+      }
+    value:
+      padding: default
+      shadow: default
+      border: default
+  points: '{{state.locations}}'
+  title: Live deliveries map
+  latitude: '40.8300000'
+  longitude: '-73.971713'
+  zoom: '11'
+actions:
+  selectPoint:
+    - action: '17158497280760.5505980844400267'
+      paramCode: ''
+      blockPageLoad: false
+      preventDefault: false
+      index: 0
+  init: []
+slots: []
