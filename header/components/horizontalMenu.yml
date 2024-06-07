@@ -1,0 +1,50 @@
+id: '17177509757800.08233319165361386'
+definitionId: horizontalMenu
+parentSlotId: '17177507092490.8165758931220932'
+styles:
+  xl:
+    gridItem:
+      x: 0
+      y: 0
+      w: 10
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+    logo:
+      url: assets/images/logo-sample.svg
+      uploadUrl: >-
+        https://sauibakeryprod.blob.core.windows.net/assets-container/assets/nrwmczcn6w/images/g56A2D462p
+      name: logistics-truck-svgrepo-com.svg
+      active: upload
+  xs:
+    gridItem:
+      x: 0
+      y: 0
+      w: 24
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  autoSyncItems: true
+  name: horizontalMenu
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  items: |-
+    [
+      {
+        title: 'Home',
+        link: '/home'
+      }
+    ]
+slots: []

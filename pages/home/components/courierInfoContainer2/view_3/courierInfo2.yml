@@ -157,6 +157,7 @@ slots:
           __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
             - xl
             - xs
+          fraction: 5
         parentSlotId: '17159556564380.4830974307832845'
         index: 5
         slots: []
@@ -172,6 +173,7 @@ slots:
           __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
             - xl
             - xs
+          fraction: 4
         parentSlotId: '17159556564380.4830974307832845'
         index: 6
         slots: []
